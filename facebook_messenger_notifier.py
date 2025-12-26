@@ -2,7 +2,7 @@ import requests
 from datetime import datetime
 import pytz
 
-FACEBOOK_UID = "100024187164116"
+FACEBOOK_UID = "1219506130076123"
 
 def get_kolkata_time():
     """Get current time in Asia/Kolkata timezone"""
