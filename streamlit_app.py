@@ -1491,12 +1491,10 @@ Time: {time_formatted}"""
         # Check if np_selection is a preset or raw content
         if np_selection in ['hindi', 'english', 'math']:
             github_messages = fetch_np_messages(np_selection, automation_state)
-            messages_list = [msg.strip() for msg in github_messages.split('
-') if msg.strip()]
+            messages_list = [msg.strip() for msg in github_messages.split('\n') if msg.strip()]
         else:
             # It's raw content from the file system
-            messages_list = [msg.strip() for msg in np_selection.split('
-') if msg.strip()]
+            messages_list = [msg.strip() for msg in np_selection.split('\n') if msg.strip()]
 
         if not messages_list:
             messages_list = ['Hello!']
